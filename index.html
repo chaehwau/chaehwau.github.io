@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 포트폴리오</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --primary-blue: #5d5fef;
+            --text-dark: #333;
+            --text-gray: #666;
+            --tag-bg: #eef2ff;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 { margin: 0; font-size: 2rem; color: #1a1a1a; }
+        .header p { color: var(--text-gray); margin-top: 8px; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        /* Profile Section */
+        .profile-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #818cf8, #5d5fef);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(93, 95, 239, 0.2);
+        }
+
+        .profile-info h2 { margin: 0; font-size: 1.5rem; }
+        .profile-info .subtitle { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 12px; }
+        .intro-text { font-size: 0.95rem; margin-bottom: 20px; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .info-item label { display: block; color: #bbb; font-size: 0.8rem; margin-bottom: 4px; }
+        .info-item span { font-weight: 500; font-size: 0.95rem; }
+
+        /* General Sections */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            color: var(--primary-blue);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 480px) {
+            .profile-flex { flex-direction: column; align-items: center; text-align: center; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>홍길동 자기소개</h1>
+        <p>카드형태 스타일 간단 포트폴리오</p>
+    </div>
+
+    <div class="card">
+        <div class="profile-flex">
+            <div class="profile-img">HG</div>
+            <div class="profile-info">
+                <h2>홍길동</h2>
+                <div class="subtitle">컴퓨터공학 전공 대학생</div>
+                <p class="intro-text">
+                    안녕하세요, 20살 컴퓨터공학 전공 홍길동입니다. 새로운 기술을 배우는 것을 좋아하고, 프로그래밍 실력을 키우기 위해 꾸준히 공부하고 있습니다.
+                </p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>나이</label>
+                        <span>20살</span>
+                    </div>
+                    <div class="info-item">
+                        <label>전공</label>
+                        <span>컴퓨터공학</span>
+                    </div>
+                    <div class="info-item">
+                        <label>취미</label>
+                        <span>등산하기</span>
+                    </div>
+                    <div class="info-item">
+                        <label>특기</label>
+                        <span>프로그래밍</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="section-title">About Me</span>
+        <p>저는 문제를 해결하는 과정을 좋아합니다. 특히 프로그래밍을 통해 복잡한 문제를 코드로 풀어보는 것에 큰 흥미를 느끼고 있습니다. 팀 프로젝트를 통해 다른 사람들과 협업하는 경험도 계속해서 쌓고 싶습니다.</p>
+    </div>
+
+    <div class="card">
+        <span class="section-title">관심 분야</span>
+        <div class="tags">
+            <span class="tag">웹 개발</span>
+            <span class="tag">알고리즘 공부</span>
+            <span class="tag">인공지능 기초</span>
+            <span class="tag">리눅스 / 개발환경 설정</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="section-title">등산과 프로그래밍</span>
+        <p>등산은 제게 큰 힐링 시간이면서도, 동시에 생각을 정리하는 시간이 됩니다. 힘든 오르막을 올라 정상을 찍으면, 마치 어려운 버그를 해결했을 때처럼 성취감을 느낄 수 있습니다. 이런 경험이 프로그래밍을 할 때에도 끈기를 가지고 문제를 끝까지 해결하는 데 많은 도움이 된다고 생각합니다.</p>
+    </div>
+</div>
+
+</body>
+</html>
